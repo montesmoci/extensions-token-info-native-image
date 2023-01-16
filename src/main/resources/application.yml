@@ -1,0 +1,29 @@
+micronaut:
+  application:
+    name: extensionsTokenInfo
+netty:
+  default:
+    allocator:
+      max-order: 3
+---
+micronaut:
+  security:
+    authentication: cookie
+    token:
+      jwt:
+        signatures:
+          secret:
+            generator:
+              secret: pleaseChangeThisSecretForANewOne
+              jws-algorithm: HS256
+    intercept-url-map:
+      - pattern: /**
+        http-method: GET
+        access:
+          - isAnonymous()
+---
+micronaut:
+  endpoints:
+    info:
+      enabled: true
+      sensitive: false
