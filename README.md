@@ -1,9 +1,13 @@
 ## Environment
 
 Version info: 'GraalVM 22.2.0 Java 17 CE'
+
 Java version info: '17.0.4+8-jvmci-22.2-b06'
+
 C compiler: cc (apple, arm64, 14.0.0)
+
 Garbage collector: Serial GC
+
 Micronaut: 3.8.1
 
 ## Steps to Recreate
